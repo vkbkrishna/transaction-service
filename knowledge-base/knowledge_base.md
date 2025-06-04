@@ -114,7 +114,22 @@ Thrown when the code find an invalid character that it cannot in the transaction
 
 ---
 
-## 8. IllegalStateException
+## 8. JsonProcessingException
+
+**Description:**  
+Thrown when the code throws an exception when generatring or processing a Json Object
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.core.JsonProcessingException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field or value that is triggering the exception
+2. Validate the Json Pojo to ensure it matches the string being sent to the process
+3. Correct any inaccuracies so processing can be completed successfully.
+
+---
+
+## 9. IllegalStateException
 
 **Description:**  
 Thrown when timeout occurs in the processing of the transaction
@@ -129,7 +144,22 @@ Thrown when timeout occurs in the processing of the transaction
 
 ---
 
-## 9. Other Unexpected Exceptions
+## 10. IOException
+
+**Description:**  
+Thrown when file reads or writes failed, reading json schemas and/or updating them.
+
+**Symptoms:**
+- Error message: `java.io.IOException`
+
+**Steps to Fix:**
+1. Check the stack trace for the filename and path being used.
+2. Check the file exists in the expected path, and is accessible by the process.
+3. Check the file format that it matches the expected format.
+
+---
+
+## 11. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
