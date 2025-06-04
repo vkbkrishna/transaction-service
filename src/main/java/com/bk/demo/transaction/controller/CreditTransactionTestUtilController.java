@@ -45,7 +45,9 @@ public class CreditTransactionTestUtilController {
         List<String> errors = new ArrayList<>();
         try (CSVParser csvParser = csvReader.parseFile("sample.csv")){
             int previousTime = 0;
-            for (CSVRecord record : csvParser) {
+            Iterator<CSVRecord> csvRecordIterator = csvParser.iterator();
+            while (csvRecordIterator.hasNext()){
+                CSVRecord record = csvRecordIterator.next();
                 CreditTransaction creditTransaction = CreditTransaction.class.getDeclaredConstructor().newInstance();
                 Map<String, Integer> headerMap = csvParser.getHeaderMap();
                 for (Field field : CreditTransaction.class.getDeclaredFields()) {

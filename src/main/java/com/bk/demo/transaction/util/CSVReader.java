@@ -4,10 +4,7 @@ import com.bk.demo.transaction.model.CreditTransaction;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.Field;
 
 public class CSVReader<T> {
@@ -31,7 +28,7 @@ public class CSVReader<T> {
      */
     public CSVParser parseFile(String filePath) throws Exception {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath)){
-             Reader reader = new InputStreamReader(inputStream);
+             BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
              CSVFormat format = hasHeader ? CSVFormat.DEFAULT.builder().setHeader().build() : CSVFormat.DEFAULT.builder().build();
              return format.parse(reader);
         } catch (IOException e) {
