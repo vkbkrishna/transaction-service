@@ -84,7 +84,37 @@ Thrown when the code tries to use an object reference that is null.
 
 ---
 
-## 6. Other Unexpected Exceptions
+## 6. MissingFieldException
+
+**Description:**  
+Thrown when the code find an invalid field in the transaction
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.databind.exc.MismatchedInputException`
+
+**Steps to Fix:**
+1. Check the stack trace for the variable that is invalid.
+2. Ensure all fields are properly added to the object.
+3. Configure the object to ignore all unknown fields.
+
+---
+
+## 7. InvalidCharacterException
+
+**Description:**  
+Thrown when the code find an invalid character that it cannot in the transaction
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.core.JsonParseException`
+
+**Steps to Fix:**
+1. Check the stack trace for the character that is invalid.
+2. Strip the character from all responses prior to creating JSON objects
+3. Configure the object to ignore all unknown fields.
+
+---
+
+## 8. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
