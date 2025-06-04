@@ -114,7 +114,22 @@ Thrown when the code find an invalid character that it cannot in the transaction
 
 ---
 
-## 8. Other Unexpected Exceptions
+## 8. IllegalStateException
+
+**Description:**  
+Thrown when timeout occurs in the processing of the transaction
+
+**Symptoms:**
+- Error message: `java.lang.IllegalStateException`
+
+**Steps to Fix:**
+1. Check the stack trace for the class where the delay occurred.
+2. Check the transaction for any invalid/mssing fields cuasing the timeout
+3. Check logs for any other timeouts occurring besides for this transaction.
+
+---
+
+## 9. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
