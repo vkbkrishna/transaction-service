@@ -207,9 +207,37 @@ Thrown when another kafka producer with the same transactional.id has been start
 
 ---
 
+## 14. OutOfOrderSequenceException
 
+**Description:**  
+Thrown when the kafka broker received an unexpected sequence number from the producer, which means that data may have been lost. 
 
-## 14. RuntimeException
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.OutOfOrderSequenceException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka record triggered this exception.
+2. Correct the issue by ensuring the config setting for idempotence only is set to true
+3. As this might trigger reordering of sent recordsm do not set this for transactionsal producers.
+
+---
+
+## 15. AuthorizationException
+
+**Description:**  
+Thrown when the kafka client does not have the necessary permissions to access the specified topic. 
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.AuthorizationException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka topic which triggered this exception.
+2. Correct the issue by ensuring the permissions are correcr for the kafka username
+3. This can occur due to missing or incorrect ACL (Access Control List) configurations.
+
+---
+
+## 16. RuntimeException
 
 **Description:**  
 Thrown when unchecked exception occurs in a running process
@@ -224,7 +252,7 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
-## 15. Other Unexpected Exceptions
+## 17. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
