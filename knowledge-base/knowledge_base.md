@@ -258,7 +258,7 @@ Thrown when unchecked exception occurs in a running process
 Invalid data received by the process
 
 **Symptoms:**
-- Error message: `ERROR 101 :: Bad data`
+- Error message: `ERROR 101 :: Bad Data`
 
 **Steps to Fix:**
 1. Check the stack trace for the class and method where the exception occurred.
