@@ -252,7 +252,39 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
-## 17. Other Unexpected Exceptions
+## 17. ERR101 :: Bad Data
+
+**Description:**  
+Invalid data received by the process
+
+**Symptoms:**
+- Error message: `ERR101 :: Bad Data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception if it is ## 5. NullPointerException, ## 6. MismatchedInputException, or something  else
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 18. ERR102 :: Duplicate Data
+
+**Description:**  
+Duplicate data received by the process
+
+**Symptoms:**
+- Error message: `ERR102 :: Duplicate Data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception why duplicate was received
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 19. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
