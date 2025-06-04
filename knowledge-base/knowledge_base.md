@@ -284,7 +284,23 @@ Duplicate data received by the process
 
 ---
 
-## 19. Other Unexpected Exceptions
+## 19. ERR103 :: Invalid Customer id
+
+**Description:**  
+Invalid customer id, incorrect format
+
+**Symptoms:**
+- Error message: `ERR103 :: Invalid Customer id`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception why format failed, possible ## 7. JsonParseException, or ## 8. JsonProcessingException.
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 20. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
