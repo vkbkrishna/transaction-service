@@ -192,8 +192,24 @@ Thrown when number field does not match the data type, or the data value expecte
 
 ---
 
+## 13. ProducerFencedException
 
-## 12. RuntimeException
+**Description:**  
+Thrown when another kafka producer with the same transactional.id has been started, as on can only have one producer instance with a transactional.id at any given time.
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.ProducerFencedException`
+
+**Steps to Fix:**
+1. Check the stack trace for the transaction id that triggered this exception.
+2. Correct the issue by ensuring the previous transaction has been completed and closed prior to starting the new transacion.
+3. Ensure that each transaction has a unique name so they do not trigger a 'fence' around the topic.
+
+---
+
+
+
+## 14. RuntimeException
 
 **Description:**  
 Thrown when unchecked exception occurs in a running process
@@ -208,7 +224,7 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
-## 13. Other Unexpected Exceptions
+## 15. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
