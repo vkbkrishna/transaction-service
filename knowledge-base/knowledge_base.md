@@ -84,7 +84,207 @@ Thrown when the code tries to use an object reference that is null.
 
 ---
 
-## 6. Other Unexpected Exceptions
+## 6. MismatchedInputException
+
+**Description:**  
+Thrown when the code find an invalid field in the transaction
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.databind.exc.MismatchedInputException`
+
+**Steps to Fix:**
+1. Check the stack trace for the variable that is invalid.
+2. Ensure all fields are properly added to the object.
+3. Configure the object to ignore all unknown fields.
+
+---
+
+## 7. JsonParseException
+
+**Description:**  
+Thrown when the code find an invalid character that it cannot in the transaction
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.core.JsonParseException`
+
+**Steps to Fix:**
+1. Check the stack trace for the character that is invalid.
+2. Strip the character from all responses prior to creating JSON objects
+3. Configure the object to ignore all unknown fields.
+
+---
+
+## 8. JsonProcessingException
+
+**Description:**  
+Thrown when the code throws an exception when generatring or processing a Json Object
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.core.JsonProcessingException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field or value that is triggering the exception
+2. Validate the Json Pojo to ensure it matches the string being sent to the process
+3. Correct any inaccuracies so processing can be completed successfully.
+
+---
+
+## 9. JsonMappingException
+
+**Description:**  
+Thrown when the code throws an exception during the serialization or deserialization process when there are issues with mapping between the JSON and Java objects.
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.databind.JsonMappingException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field or value that is triggering the exception
+2. Validate the Json Pojo to ensure it matches the Java object it is being mapped to.
+3. Correct any inaccuracies so processing can be completed successfully.
+
+---
+
+
+
+## 10. IllegalStateException
+
+**Description:**  
+Thrown when timeout occurs in the processing of the transaction
+
+**Symptoms:**
+- Error message: `java.lang.IllegalStateException`
+
+**Steps to Fix:**
+1. Check the stack trace for the class where the delay occurred.
+2. Check the transaction for any invalid/mssing fields cuasing the timeout
+3. Check logs for any other timeouts occurring besides for this transaction.
+
+---
+
+## 11. IOException
+
+**Description:**  
+Thrown when file reads or writes failed, reading json schemas and/or updating them.
+
+**Symptoms:**
+- Error message: `java.io.IOException`
+
+**Steps to Fix:**
+1. Check the stack trace for the filename and path being used.
+2. Check the file exists in the expected path, and is accessible by the process.
+3. Check the file format that it matches the expected format.
+
+---
+
+## 12. NumberFormatException
+
+**Description:**  
+Thrown when number field does not match the data type, or the data value expected
+
+**Symptoms:**
+- Error message: `java.lang.NumberFormatException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field name and value which triggered the exception
+2. Confirm that the value sent does not match the specification.
+3. Either update the specification to match the field type and value, or ask upstream to correct the stream to send valid data.
+4. Filter invalid data earlier in the process to avoid throwing unnecessary exceptions
+
+---
+
+## 13. ProducerFencedException
+
+**Description:**  
+Thrown when another kafka producer with the same transactional.id has been started, as on can only have one producer instance with a transactional.id at any given time.
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.ProducerFencedException`
+
+**Steps to Fix:**
+1. Check the stack trace for the transaction id that triggered this exception.
+2. Correct the issue by ensuring the previous transaction has been completed and closed prior to starting the new transacion.
+3. Ensure that each transaction has a unique name so they do not trigger a 'fence' around the topic.
+
+---
+
+## 14. OutOfOrderSequenceException
+
+**Description:**  
+Thrown when the kafka broker received an unexpected sequence number from the producer, which means that data may have been lost. 
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.OutOfOrderSequenceException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka record triggered this exception.
+2. Correct the issue by ensuring the config setting for idempotence only is set to true
+3. As this might trigger reordering of sent recordsm do not set this for transactionsal producers.
+
+---
+
+## 15. AuthorizationException
+
+**Description:**  
+Thrown when the kafka client does not have the necessary permissions to access the specified topic. 
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.AuthorizationException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka topic which triggered this exception.
+2. Correct the issue by ensuring the permissions are correcr for the kafka username
+3. This can occur due to missing or incorrect ACL (Access Control List) configurations.
+
+---
+
+## 16. RuntimeException
+
+**Description:**  
+Thrown when unchecked exception occurs in a running process
+
+**Symptoms:**
+- Error message: `java.lang.RuntimeException`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Add code to catch and handle the exception cleanly in the future.
+3. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 17. ERR101 :: Bad Data
+
+**Description:**  
+Invalid data received by the process
+
+**Symptoms:**
+- Error message: `ERR101 :: Bad Data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception if it is ## 5. NullPointerException, ## 6. MismatchedInputException, or something  else
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 18. ERR102 :: Duplicate Data
+
+**Description:**  
+Duplicate data received by the process
+
+**Symptoms:**
+- Error message: `ERR102 :: Duplicate Data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception why duplicate was received
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 19. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.

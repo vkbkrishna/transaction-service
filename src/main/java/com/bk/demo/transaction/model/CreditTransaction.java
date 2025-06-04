@@ -1,56 +1,130 @@
-// src/main/java/com/bk/demo/transaction/model/CreditTransaction.java
 package com.bk.demo.transaction.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
-import java.math.BigDecimal;
-import java.time.ZonedDateTime;
 
 @Entity
 @Data
 @Slf4j
 public class CreditTransaction {
+    private long index;
     @Id
-    private String id;
+    private long transactionId;
+    private String txDateTime;
+    private long customerId;
+    private long terminalId;
+    private double txAmount;
+    private int txTimeSeconds;
+    private int txTimeDays;
+    private boolean txFraud;
+    private int txFraudScenario;
 
-    @NotBlank
-    private String accountNumber;
+    // Default constructor
+    public CreditTransaction() {
+    }
 
-    @NotNull
-    @DecimalMin(value = "0.01", message = "Amount must be positive")
-    private BigDecimal amount;
+    // Parameterized constructor
+    public CreditTransaction(long transactionId, String txDateTime, long customerId,
+                             long terminalId, double txAmount, int txTimeSeconds,
+                             int txTimeDays, boolean txFraud, int txFraudScenario) {
+        this.transactionId = transactionId;
+        this.txDateTime = txDateTime;
+        this.customerId = customerId;
+        this.terminalId = terminalId;
+        this.txAmount = txAmount;
+        this.txTimeSeconds = txTimeSeconds;
+        this.txTimeDays = txTimeDays;
+        this.txFraud = txFraud;
+        this.txFraudScenario = txFraudScenario;
+    }
 
-    private ZonedDateTime transactionDate;
+    // Getters and Setters
+    public long getTransactionId() {
+        return transactionId;
+    }
 
-    @NotBlank
-    private String transactionType;
+    public void setTransactionId(long transactionId) {
+        this.transactionId = transactionId;
+    }
 
-    @NotBlank
-    private String currency;
+    public String getTxDateTime() {
+        return txDateTime;
+    }
 
-    @Size(max = 255)
-    private String description;
+    public void setTxDateTime(String txDateTime) {
+        this.txDateTime = txDateTime;
+    }
 
-    @NotBlank
-    private String referenceNumber;
+    public long getCustomerId() {
+        return customerId;
+    }
 
-    private String merchantName;
-    private String merchantCategory;
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
+    }
 
-    @NotBlank
-    private String status;
+    public long getTerminalId() {
+        return terminalId;
+    }
 
-    private String initiatedBy;
-    private String approvedBy;
-    private ZonedDateTime approvalDate;
-    private String channel;
-    private String location;
-    private String remarks;
-    private Boolean isReversed;
-    private ZonedDateTime reversalDate;
-    private String reversalReason;
-    private String externalId;
+    public void setTerminalId(long terminalId) {
+        this.terminalId = terminalId;
+    }
+
+    public double getTxAmount() {
+        return txAmount;
+    }
+
+    public void setTxAmount(double txAmount) {
+        this.txAmount = txAmount;
+    }
+
+    public int getTxTimeSeconds() {
+        return txTimeSeconds;
+    }
+
+    public void setTxTimeSeconds(int txTimeSeconds) {
+        this.txTimeSeconds = txTimeSeconds;
+    }
+
+    public int getTxTimeDays() {
+        return txTimeDays;
+    }
+
+    public void setTxTimeDays(int txTimeDays) {
+        this.txTimeDays = txTimeDays;
+    }
+
+    public boolean isTxFraud() {
+        return txFraud;
+    }
+
+    public void setTxFraud(boolean txFraud) {
+        this.txFraud = txFraud;
+    }
+
+    public int getTxFraudScenario() {
+        return txFraudScenario;
+    }
+
+    public void setTxFraudScenario(int txFraudScenario) {
+        this.txFraudScenario = txFraudScenario;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId=" + transactionId +
+                ", txDateTime=" + txDateTime +
+                ", customerId=" + customerId +
+                ", terminalId=" + terminalId +
+                ", txAmount=" + txAmount +
+                ", txTimeSeconds=" + txTimeSeconds +
+                ", txTimeDays=" + txTimeDays +
+                ", txFraud=" + txFraud +
+                ", txFraudScenario=" + txFraudScenario +
+                '}';
+    }
 }
