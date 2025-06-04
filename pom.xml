@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bk.demo</groupId>
-	<artifactId>transaction-service</artifactId>
+	<artifactId>creditTransaction-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>transaction-service</name>
-	<description>Simple transaction service demo</description>
+	<name>creditTransaction-service</name>
+	<description>Simple creditTransaction service demo</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,6 +53,11 @@
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.10.0</version>
 		</dependency>
 	</dependencies>
 

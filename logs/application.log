@@ -1,0 +1,153 @@
+2025-06-04 17:22:05 [main] INFO  c.b.d.t.TransactionServiceApplicationTests [transaction-service] [transactionId:] - Starting TransactionServiceApplicationTests using Java 17.0.2 with PID 15864 (started by HMummadi in C:\Users\HMummadi\genaihack\transaction-service)
+2025-06-04 17:22:05 [main] INFO  c.b.d.t.TransactionServiceApplicationTests [transaction-service] [transactionId:] - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 17:22:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [transaction-service] [transactionId:] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04 17:22:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [transaction-service] [transactionId:] - Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2025-06-04 17:22:07 [main] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Starting...
+2025-06-04 17:22:07 [main] INFO  com.zaxxer.hikari.pool.HikariPool [transaction-service] [transactionId:] - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-04 17:22:07 [main] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Start completed.
+2025-06-04 17:22:07 [main] INFO  o.h.jpa.internal.util.LogHelper [transaction-service] [transactionId:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04 17:22:08 [main] INFO  org.hibernate.Version [transaction-service] [transactionId:] - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-04 17:22:08 [main] INFO  o.h.c.i.RegionFactoryInitiator [transaction-service] [transactionId:] - HHH000026: Second-level cache disabled
+2025-06-04 17:22:08 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [transaction-service] [transactionId:] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04 17:22:08 [main] WARN  org.hibernate.orm.deprecation [transaction-service] [transactionId:] - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04 17:22:09 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [transaction-service] [transactionId:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04 17:22:09 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [transaction-service] [transactionId:] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04 17:22:10 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [transaction-service] [transactionId:] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04 17:22:10 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [transaction-service] [transactionId:] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-04 17:22:10 [main] INFO  c.b.d.t.TransactionServiceApplicationTests [transaction-service] [transactionId:] - Started TransactionServiceApplicationTests in 5.655 seconds (process running for 7.698)
+2025-06-04 17:22:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [transaction-service] [transactionId:] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04 17:22:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Shutdown initiated...
+2025-06-04 17:22:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Shutdown completed.
+2025-06-04 17:22:54 [main] INFO  c.b.d.t.TransactionServiceApplication [transaction-service] [transactionId:] - Starting TransactionServiceApplication using Java 17.0.2 with PID 5048 (C:\Users\HMummadi\genaihack\transaction-service\target\classes started by HMummadi in C:\Users\HMummadi\genaihack\transaction-service)
+2025-06-04 17:22:54 [main] INFO  c.b.d.t.TransactionServiceApplication [transaction-service] [transactionId:] - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 17:22:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [transaction-service] [transactionId:] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04 17:22:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [transaction-service] [transactionId:] - Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2025-06-04 17:22:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [transaction-service] [transactionId:] - Tomcat initialized with port 8080 (http)
+2025-06-04 17:22:56 [main] INFO  o.a.catalina.core.StandardService [transaction-service] [transactionId:] - Starting service [Tomcat]
+2025-06-04 17:22:56 [main] INFO  o.a.catalina.core.StandardEngine [transaction-service] [transactionId:] - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-04 17:22:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [transaction-service] [transactionId:] - Initializing Spring embedded WebApplicationContext
+2025-06-04 17:22:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [transaction-service] [transactionId:] - Root WebApplicationContext: initialization completed in 2723 ms
+2025-06-04 17:22:57 [main] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Starting...
+2025-06-04 17:22:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool [transaction-service] [transactionId:] - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-04 17:22:57 [main] INFO  com.zaxxer.hikari.HikariDataSource [transaction-service] [transactionId:] - HikariPool-1 - Start completed.
+2025-06-04 17:22:57 [main] INFO  o.h.jpa.internal.util.LogHelper [transaction-service] [transactionId:] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04 17:22:57 [main] INFO  org.hibernate.Version [transaction-service] [transactionId:] - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-06-04 17:22:58 [main] INFO  o.h.c.i.RegionFactoryInitiator [transaction-service] [transactionId:] - HHH000026: Second-level cache disabled
+2025-06-04 17:22:58 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [transaction-service] [transactionId:] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-04 17:22:58 [main] WARN  org.hibernate.orm.deprecation [transaction-service] [transactionId:] - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-04 17:23:00 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [transaction-service] [transactionId:] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-04 17:23:00 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [transaction-service] [transactionId:] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04 17:23:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [transaction-service] [transactionId:] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-04 17:23:01 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [transaction-service] [transactionId:] - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-04 17:23:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [transaction-service] [transactionId:] - Tomcat started on port 8080 (http) with context path '/'
+2025-06-04 17:23:01 [main] INFO  c.b.d.t.TransactionServiceApplication [transaction-service] [transactionId:] - Started TransactionServiceApplication in 8.065 seconds (process running for 8.967)
+2025-06-04 17:23:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [transaction-service] [transactionId:] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 17:23:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [transaction-service] [transactionId:] - Initializing Servlet 'dispatcherServlet'
+2025-06-04 17:23:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [transaction-service] [transactionId:] - Completed initialization in 1 ms
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:0] - Processing transaction from terminal 3156
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:0] - Transaction time stamp is 2023-01-01 00:00:31
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:0] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:0] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:0] - Transaction has been processed in 31 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:1] - Processing transaction from terminal 3412
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:1] - Transaction time stamp is 2023-01-01 00:02:10
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:1] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:1] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:1] - Transaction has been processed in 99 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-4] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:2] - Processing transaction from terminal 1365
+2025-06-04 17:23:26 [http-nio-8080-exec-4] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:2] - Transaction time stamp is 2023-01-01 00:07:56
+2025-06-04 17:23:26 [http-nio-8080-exec-4] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:2] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-4] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:2] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-4] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:2] - Transaction has been processed in 346 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-5] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:3] - Processing transaction from terminal 8737
+2025-06-04 17:23:26 [http-nio-8080-exec-5] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:3] - Transaction time stamp is 2023-01-01 00:09:29
+2025-06-04 17:23:26 [http-nio-8080-exec-5] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:3] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-5] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:3] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-5] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:3] - Transaction has been processed in 93 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-6] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:4] - Processing transaction from terminal 9906
+2025-06-04 17:23:26 [http-nio-8080-exec-6] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:4] - Transaction time stamp is 2023-01-01 00:10:34
+2025-06-04 17:23:26 [http-nio-8080-exec-6] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:4] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-6] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:4] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-6] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:4] - Transaction has been processed in 65 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-7] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:5] - Processing transaction from terminal 8803
+2025-06-04 17:23:26 [http-nio-8080-exec-7] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:5] - Transaction time stamp is 2023-01-01 00:10:45
+2025-06-04 17:23:26 [http-nio-8080-exec-7] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:5] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-7] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:5] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-7] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:5] - Transaction has been processed in 11 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-8] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:6] - Processing transaction from terminal 5490
+2025-06-04 17:23:26 [http-nio-8080-exec-8] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:6] - Transaction time stamp is 2023-01-01 00:11:30
+2025-06-04 17:23:26 [http-nio-8080-exec-8] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:6] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-8] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:6] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-8] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:6] - Transaction has been processed in 45 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-9] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:7] - Processing transaction from terminal 2486
+2025-06-04 17:23:26 [http-nio-8080-exec-9] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:7] - Transaction time stamp is 2023-01-01 00:11:44
+2025-06-04 17:23:26 [http-nio-8080-exec-9] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:7] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-9] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:7] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-9] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:7] - Transaction has been processed in 14 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-10] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:8] - Processing transaction from terminal 8354
+2025-06-04 17:23:26 [http-nio-8080-exec-10] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:8] - Transaction time stamp is 2023-01-01 00:11:53
+2025-06-04 17:23:26 [http-nio-8080-exec-10] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:8] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-10] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:8] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-10] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:8] - Transaction has been processed in 9 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:9] - Processing transaction from terminal 6212
+2025-06-04 17:23:26 [http-nio-8080-exec-2] ERROR c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:9] - Unable to get date from transaction date time field
+java.lang.NullPointerException: Cannot invoke "String.substring(int, int)" because the return value of "com.bk.demo.transaction.model.CreditTransaction.getTxDateTime()" is null
+	at com.bk.demo.transaction.controller.CreditTransactionController.create(CreditTransactionController.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:9] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:9] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-2] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:9] - Transaction has been processed in 111 seconds
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:10] - Processing transaction from terminal 6212
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:10] - Transaction time stamp is 2023-01-01 00:13:44
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:10] - Attempting to save transaction
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.s.CreditTransactionService [transaction-service] [transactionId:10] - Transaction saved successfully
+2025-06-04 17:23:26 [http-nio-8080-exec-3] INFO  c.b.d.t.c.CreditTransactionController [transaction-service] [transactionId:10] - Transaction has been processed in 0 seconds
