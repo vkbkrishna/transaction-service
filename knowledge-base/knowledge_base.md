@@ -252,7 +252,7 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
-## ERROR 101 :: Bad Data
+## 17. ERROR 101 :: Bad Data
 
 **Description:**  
 Invalid data received by the process
@@ -268,7 +268,7 @@ Invalid data received by the process
 
 ---
 
-## 17. Other Unexpected Exceptions
+## 18. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
