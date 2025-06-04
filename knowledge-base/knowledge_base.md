@@ -84,7 +84,7 @@ Thrown when the code tries to use an object reference that is null.
 
 ---
 
-## 6. MissingFieldException
+## 6. MismatchedInputException
 
 **Description:**  
 Thrown when the code find an invalid field in the transaction
@@ -99,7 +99,7 @@ Thrown when the code find an invalid field in the transaction
 
 ---
 
-## 7. InvalidCharacterException
+## 7. JsonParseException
 
 **Description:**  
 Thrown when the code find an invalid character that it cannot in the transaction
