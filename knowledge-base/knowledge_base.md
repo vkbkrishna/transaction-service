@@ -252,6 +252,22 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
+## ERROR 101 :: Bad Data
+
+**Description:**  
+Invalid data received by the process
+
+**Symptoms:**
+- Error message: `ERROR 101 :: Bad data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception if it is ## 5. NullPointerException, ## 6. MismatchedInputException, or something  else
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
 ## 17. Other Unexpected Exceptions
 
 **Description:**  
