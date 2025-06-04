@@ -129,7 +129,24 @@ Thrown when the code throws an exception when generatring or processing a Json O
 
 ---
 
-## 9. IllegalStateException
+## 9. JsonMappingException
+
+**Description:**  
+Thrown when the code throws an exception during the serialization or deserialization process when there are issues with mapping between the JSON and Java objects.
+
+**Symptoms:**
+- Error message: `com.fasterxml.jackson.databind.JsonMappingException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field or value that is triggering the exception
+2. Validate the Json Pojo to ensure it matches the Java object it is being mapped to.
+3. Correct any inaccuracies so processing can be completed successfully.
+
+---
+
+
+
+## 10. IllegalStateException
 
 **Description:**  
 Thrown when timeout occurs in the processing of the transaction
@@ -144,7 +161,7 @@ Thrown when timeout occurs in the processing of the transaction
 
 ---
 
-## 10. IOException
+## 11. IOException
 
 **Description:**  
 Thrown when file reads or writes failed, reading json schemas and/or updating them.
@@ -159,7 +176,68 @@ Thrown when file reads or writes failed, reading json schemas and/or updating th
 
 ---
 
-## 11. RuntimeException
+## 12. NumberFormatException
+
+**Description:**  
+Thrown when number field does not match the data type, or the data value expected
+
+**Symptoms:**
+- Error message: `java.lang.NumberFormatException`
+
+**Steps to Fix:**
+1. Check the stack trace for the field name and value which triggered the exception
+2. Confirm that the value sent does not match the specification.
+3. Either update the specification to match the field type and value, or ask upstream to correct the stream to send valid data.
+4. Filter invalid data earlier in the process to avoid throwing unnecessary exceptions
+
+---
+
+## 13. ProducerFencedException
+
+**Description:**  
+Thrown when another kafka producer with the same transactional.id has been started, as on can only have one producer instance with a transactional.id at any given time.
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.ProducerFencedException`
+
+**Steps to Fix:**
+1. Check the stack trace for the transaction id that triggered this exception.
+2. Correct the issue by ensuring the previous transaction has been completed and closed prior to starting the new transacion.
+3. Ensure that each transaction has a unique name so they do not trigger a 'fence' around the topic.
+
+---
+
+## 14. OutOfOrderSequenceException
+
+**Description:**  
+Thrown when the kafka broker received an unexpected sequence number from the producer, which means that data may have been lost. 
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.OutOfOrderSequenceException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka record triggered this exception.
+2. Correct the issue by ensuring the config setting for idempotence only is set to true
+3. As this might trigger reordering of sent recordsm do not set this for transactionsal producers.
+
+---
+
+## 15. AuthorizationException
+
+**Description:**  
+Thrown when the kafka client does not have the necessary permissions to access the specified topic. 
+
+**Symptoms:**
+- Error message: `org.apache.kafka.common.errors.AuthorizationException`
+
+**Steps to Fix:**
+1. Check the stack trace for the kafka topic which triggered this exception.
+2. Correct the issue by ensuring the permissions are correcr for the kafka username
+3. This can occur due to missing or incorrect ACL (Access Control List) configurations.
+
+---
+
+## 16. RuntimeException
 
 **Description:**  
 Thrown when unchecked exception occurs in a running process
@@ -174,7 +252,7 @@ Thrown when unchecked exception occurs in a running process
 
 ---
 
-## 12. Other Unexpected Exceptions
+## 17. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
