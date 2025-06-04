@@ -268,7 +268,23 @@ Invalid data received by the process
 
 ---
 
-## 18. Other Unexpected Exceptions
+## 18. ERR102 :: Duplicate Data
+
+**Description:**  
+Duplicate data received by the process
+
+**Symptoms:**
+- Error message: `ERR102 :: Duplicate Data`
+
+**Steps to Fix:**
+1. Check the stack trace for the class and method where the exception occurred.
+2. Check for the exception why duplicate was received
+3. Add code to catch and handle the exception cleanly in the future.
+4. Determine the cause from the trace, and fix accordingly.
+
+---
+
+## 19. Other Unexpected Exceptions
 
 **Description:**  
 Any other unhandled exceptions.
