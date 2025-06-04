@@ -13,7 +13,7 @@ public class CreditTransaction {
     @Id
     private long transactionId;
     private String txDateTime;
-    private long customerId;
+    private String customerId;
     private long terminalId;
     private double txAmount;
     private int txTimeSeconds;
@@ -26,7 +26,7 @@ public class CreditTransaction {
     }
 
     // Parameterized constructor
-    public CreditTransaction(long transactionId, String txDateTime, long customerId,
+    public CreditTransaction(long transactionId, String txDateTime, String customerId,
                              long terminalId, double txAmount, int txTimeSeconds,
                              int txTimeDays, boolean txFraud, int txFraudScenario) {
         this.transactionId = transactionId;
@@ -57,11 +57,11 @@ public class CreditTransaction {
         this.txDateTime = txDateTime;
     }
 
-    public long getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(long customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
