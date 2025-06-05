@@ -1,10 +1,6 @@
 package com.bk.demo.transaction.util;
 
 import com.bk.demo.transaction.model.CreditTransaction;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-
-import java.io.*;
 import java.lang.reflect.Field;
 
 public class CSVReader<T> {
@@ -26,7 +22,7 @@ public class CSVReader<T> {
      * @return List of POJOs of type T
      * @throws Exception If there's an error reading the file or mapping to POJOs
      */
-    public CSVParser parseFile(String filePath) throws Exception {
+/*    public CSVParser parseFile(String filePath) throws Exception {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath)){
              BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
              CSVFormat format = hasHeader ? CSVFormat.DEFAULT.builder().setHeader().build() : CSVFormat.DEFAULT.builder().build();
@@ -34,7 +30,7 @@ public class CSVReader<T> {
         } catch (IOException e) {
             throw new RuntimeException("Failed to read CSV resource file: " + filePath, e);
         }
-    }
+    }*/
 
     /**
      * Read a CSV file and convert it to a list of POJOs

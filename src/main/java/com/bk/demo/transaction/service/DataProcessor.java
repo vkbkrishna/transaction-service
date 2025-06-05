@@ -14,7 +14,7 @@ import java.util.UUID;
 public class DataProcessor {
     @Autowired
     private  CreditTransactionRepository repository;
-    private static final Random random = new Random(10);
+    private static final Random random = new Random(20);
 
     public void process(CreditTransaction creditTransaction) {
         // Simulate random errors
